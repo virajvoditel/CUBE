@@ -27,10 +27,29 @@ export default function PlasmicLoaderPage(props: {
       prefetchedData={plasmicData}
       prefetchedQueryData={queryCache}
     >
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-xxxxxxxxxx"
+      <Script id="clarity-analytics" strategy="afterInteractive">
+        {`
+          (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "dz7diz6p8v");
+        `}
+        </Script>
+        <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-V2YWMDGN8F"
         strategy="afterInteractive"
       />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-V2YWMDGN8F');
+        `}
+      </Script>
+
       <PlasmicComponent component={plasmicData.entryCompMetas[0].name} />
     </PlasmicRootProvider>
   );
