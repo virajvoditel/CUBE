@@ -4,6 +4,7 @@ import {
   extractPlasmicQueryData,
 } from "@plasmicapp/loader-nextjs";
 import { GetStaticPaths, GetStaticProps } from "next";
+import Script from 'next/script';
 
 import {
   ComponentRenderData,
@@ -26,6 +27,10 @@ export default function PlasmicLoaderPage(props: {
       prefetchedData={plasmicData}
       prefetchedQueryData={queryCache}
     >
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-xxxxxxxxxx"
+        strategy="afterInteractive"
+      />
       <PlasmicComponent component={plasmicData.entryCompMetas[0].name} />
     </PlasmicRootProvider>
   );
