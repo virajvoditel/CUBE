@@ -40,9 +40,6 @@ export default function PlasmicLoaderPage(props: {
         src="https://www.googletagmanager.com/gtag/js?id=G-V2YWMDGN8F"
         strategy="afterInteractive"
       />
-      <Script
-        src="https://getlaunchlist.com/js/widget-diy.js"
-      />
       <Script id="google-analytics" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
