@@ -11,12 +11,6 @@ function IndexPage() {
                 y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "dz7diz6p8v");
         </script>
-         <script
-         src="https://getlaunchlist.com/js/widget-diy.js"
-         type="text/javascript"
-        >
-        </script>
-
       </Head>
     </div>
   )
