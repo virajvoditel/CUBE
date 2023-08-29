@@ -64,6 +64,9 @@ export default function PlasmicLoaderPage(props: {
           s.parentNode.insertBefore(b, s);})(window.lintrk);
         `}
       </Script>
+      <Noscript>
+        <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=5815073&fmt=gif" />
+      </Noscript>
       <PlasmicComponent component={plasmicData.entryCompMetas[0].name} />
     </PlasmicRootProvider>
   );
