@@ -43,7 +43,6 @@ export default function PlasmicLoaderPage(props: {
       <Script
         src="//in.fw-cdn.com/31563469/776855.js"
         strategy="afterInteractive"
-        chat='true'
       />
       
       <Script id="google-analytics" strategy="afterInteractive">
