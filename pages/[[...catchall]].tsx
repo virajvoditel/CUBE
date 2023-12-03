@@ -40,6 +40,12 @@ export default function PlasmicLoaderPage(props: {
         src="https://www.googletagmanager.com/gtag/js?id=G-V2YWMDGN8F"
         strategy="afterInteractive"
       />
+      <Script
+        src="//in.fw-cdn.com/31563469/776855.js"
+        strategy="afterInteractive"
+        chat='true'
+      />
+      
       <Script id="google-analytics" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
